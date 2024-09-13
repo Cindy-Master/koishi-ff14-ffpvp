@@ -1,0 +1,25 @@
+import { Config } from '../config/schema';
+export declare function getUserCredentials(playerid: string, config: Config): Promise<any | null>;
+export declare function getAllCredentials(config: Config): Promise<any[]>;
+export declare function getPermissionDescription(permissionLevel: number): string;
+export declare function activatePluginWithSingleApiCall(playerid: string, userId: string, platform: string, config: Config): Promise<string>;
+export declare function removeAllCredentials(userId: string, platform: string, config: Config): Promise<any>;
+export declare function removeCredential(userId: string, platform: string, playerid: string, config: Config): Promise<any>;
+export declare function getUserInfo(userId: string, platform: string, config: Config): Promise<any>;
+export declare function removePluginLicense(playerid: string, config: Config): Promise<boolean>;
+export declare function deleteDatabaseRecord(playerid: string, config: Config): Promise<boolean>;
+export declare function activatePlugin(playerid: string, permissionLevel: number, config: Config): Promise<void>;
+export declare function getAccessToken(client_id: string, client_secret: string): Promise<string>;
+export declare function queryCharacterData(access_token: string, character_name: string, server_slug: string, boss_id: number, difficulty: number): Promise<any>;
+export declare function getUIDByCharacterName(character_name: string, group_name: string, config: Config): Promise<string | null>;
+export declare function getCharacterInfo(character_name: string, config: Config): Promise<any>;
+export declare function getCharacterHistory(uid: string, config: Config): Promise<any>;
+export declare function getCharacterKillTimes(uid: string, config: Config): Promise<any>;
+export declare function getGuildInfo(group_name: string, guild_name: string, config: Config): Promise<any>;
+export declare function checkCharacterRaid(character_name: string, group_name: string, raid_name: string, config: Config): Promise<any>;
+export declare function updateUserPermissionLevel(playerid: string, newLevel: number, requestUserId: string, config: any): Promise<{
+    success: boolean;
+    message: string;
+}>;
+export declare function getCharacterHouseInfo(uid: string, config: Config): Promise<any>;
+export declare function getFF14Events(): Promise<any>;

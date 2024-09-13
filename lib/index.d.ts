@@ -1,9 +1,5 @@
-import { Context, Schema } from 'koishi';
+import { Context } from 'koishi';
+import { Config as PluginConfig } from './config/schema';
 export declare const name = "ff14-ffpvp";
-export interface Config {
-    session: string;
-    client_id: string;
-    client_secret: string;
-}
-export declare const Config: Schema<Config>;
-export declare function apply(ctx: Context, config: Config): void;
+export declare const Config: import("schemastery")<PluginConfig>;
+export declare function apply(ctx: Context, config: PluginConfig): void;
